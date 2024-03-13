@@ -81,3 +81,71 @@ body {
 #Modules {
   background-color: #000000;
 }
+#jaipur-logo{
+  margin-top: 10px;
+  margin-left: 500px;
+  margin-bottom: 20px;
+}
+#Username{
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  
+}
+#Uname{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  color: white;
+}
+#pword{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  border-radius: 10px;
+  color: white;
+}
+#password{
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+#dropdown{
+  height: 20px;
+  width: 100px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+#date{
+  margin-top: -28px;
+  color: white;
+  margin-left: 1050px;
+  margin-bottom: 20px;
+}
+#time{
+  margin-top: -38px;
+  color: white;
+  margin-left: 1200px;
+  margin-bottom: 20px;
+}
+#uem-pic{
+  height: 800px;
+  width: 1200px;
+  margin-left: 50px;
+}
+#Academic-ERP{
+  height: 500px;
+  width: 500px;
+  margin-top: -800px;
+  margin-left: 1300px;
+  color: white;
+}
+#user-input{
+  margin-left: 25px;
+  border-radius: 10px;
+  background-color: red;
+}
