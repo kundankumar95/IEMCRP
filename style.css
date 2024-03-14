@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #4c6270;
+  background-color:#36454f;
   color: #333;
 }
 
@@ -86,66 +86,144 @@ body {
   margin-left: 500px;
   margin-bottom: 20px;
 }
-#Username{
-  margin-top: 20px;
-  margin-left: 0px;
-  margin-bottom: 10px;
+
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+#left-card {
+  padding: 20px;
+  width: 40%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust opacity as needed */
   border-radius: 10px;
+  box-shadow: 0 164px 164px rgba(0, 0, 0, 0.3);
+  height: 50%;
+  transition: transform 0.3s;
+}
+#left-card:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+#right-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#left-card {
+  display: flex;
+  flex-direction: column;
+
+  
+  padding: 20px;
+  width: 30%;
+  margin-right: 200px; 
+}
+
+#right-card {
+  width: 20%; 
+  margin-right: 350px;
+}
+
+
+
+
+#jaipur-logo img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 120%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   
 }
-#Uname{
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 200px;
-  color: white;
+#left-card input[type="text"],
+#left-card input[type="password"] {
+  
+  margin-bottom: 35px; /* Adjust the value as needed */
 }
-#pword{
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  border-radius: 10px;
-  color: white;
+
+#left-card select {
+  margin-top: 10px; /* Adjust the value as needed */
 }
-#password{
-  margin-top: 20px;
-  margin-left: 0px;
-  margin-bottom: 10px;
-  border-radius: 100px;
+button {
+  width: 35%;
+  padding: 15px;
+  background-color: aqua;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; 
+  font-size: larger;
+  align-self: center;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
-#dropdown{
-  height: 20px;
-  width: 100px;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-}
-#date{
-  margin-top: -28px;
-  color: white;
-  margin-left: 1050px;
-  margin-bottom: 20px;
-}
-#time{
-  margin-top: -38px;
-  color: white;
-  margin-left: 1200px;
-  margin-bottom: 20px;
+#left-card select {
+  margin-bottom: 20px; /* Add spacing between inputs and dropdown */
 }
 #uem-pic{
-  height: 800px;
-  width: 1200px;
-  margin-left: 50px;
+  width: 196%;
+  height: 120%;
 }
-#Academic-ERP{
-  height: 500px;
-  width: 500px;
-  margin-top: -800px;
-  margin-left: 1300px;
-  color: white;
+#user-input {
+  margin-top: 28px; 
+  box-shadow: 0 0 20px 5px aqua; /* Add glow effect */
+  transform: scale(1.05); /* Add slight scale effect */
 }
-#user-input{
-  margin-left: 25px;
-  border-radius: 10px;
-  background-color: red;
+
+button:hover {
+  animation: glow 1s infinite alternate; /* Add glow animation */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 5px aqua; /* Start glow effect */
+  }
+  100% {
+    box-shadow: 0 0 20px 10px aqua; /* End glow effect */
+  }
+}
+
+#Uname, #pword, #pword2,#selec {
+  color: aqua;
+}
+#date,
+#time {
+  align-items: end;
+  margin-bottom: 25px;
+  color: chartreuse;
+}
+
+#date {
+  float: left;
+  width: calc(50% - 10px);
+}
+
+#time {
+  float: right;
+  width: calc(50% - 10px);
+}
+
+#forget-password {
+  margin-top: 10px;
+  text-align: center;
 }
