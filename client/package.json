@@ -1,0 +1,19 @@
+{
+  "name": "iemcrp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundankumar95/IEMCRP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kundankumar95/IEMCRP/issues"
+  },
+  "homepage": "https://github.com/kundankumar95/IEMCRP#readme"
+}
