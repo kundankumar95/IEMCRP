@@ -1,91 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Student</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <style>
+       #box {
+           display: none;
+           position: absolute;
+           padding: 10px;
+       }
+   </style>
 </head>
 <body>
-    <div id="jaipur-logo">
-        <img src="uem-kol-logo.png" alt="#">
-    </div>
-    <button id="option">Option</button>
-
-    <div class="container">
-        <div>
-            <img class="photo-container" src="kundan.png" alt="Student Photo">
-        </div>
-        <div class="info-container">
-            <p>You are the student of B.Tech, CSIT & Weekly Time Table of Semester:4, Sec:A & Class Roll No.:22</p>
-        </div>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Period 1</th>
-                    <th>Period 2</th>
-                    <th>Period 3</th>
-                    <th>Period 4</th>
-                    <th>Period 5</th>
-                    <th>Period 6</th>
-                    <th>Period 7</th>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-               
-            </table>
-        </div>
-    </div>
-
-    <script src="index.js"></script>
+  
+   <div id="jaipur-logo">
+       <img src="uem-kol-logo.png" alt="#">
+   </div>
+   <div>
+       <p style="color: white; margin-left: 500px; margin-top: 50px;">Welcome <span id="name">Kundan Kumar</span>, using College Resource Planning. Your Computer No is :<span id="computer-no">202.8.114.150,172.69.86.208</span></p>
+       <p style="color: red; margin-left:600px;">Please change default password for security-using Set My Password</p>
+       <p style="color: white; margin-left: 400px;">Please upload your official password size photo in .jpg format(size less than 30kb) && update personal data by clicking <span style="color:red">Update/Display My Information</span></p>
+   </div>
+   <div class="container">
+       <div>
+           <img class="photo-container" src="kundan.png" alt="Student Photo">
+       </div>
+       <div class="info-container">
+           <p>You are the student of B.Tech, CSIT & Weekly Time Table of Semester:4, Sec:A & Class Roll No.:22</p>
+       </div>
+       <div class="table-container">
+           <table>
+               <tr>
+                   <th>Day</th>
+                   <th>Period 1</th>
+                   <th>Period 2</th>
+                   <th>Period 3</th>
+                   <th>Period 4</th>
+                   <th>Period 5</th>
+                   <th>Period 6</th>
+                   <th>Period 7</th>
+               </tr>
+               <tr>
+                   <td>Monday</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>Tuesday</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>Wednesday</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>Thursday</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>Friday</td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+             
+           </table>
+       </div>
+   </div>
+   <div id="box" class="menu-box" style="display: none;">
+       <button id="Set-My-Password" style="width:200px; margin-top: -500%;">Set My Password</button><br>
+       <button id="Upload-My-Photo" style="width:200px">Upload My Photo</button><br>
+       <button id="library" style="width:200px">Digital Library Resources</button><br>
+       <button id="calender" style="width:200px">Organisation's Calender</button><br>
+       <button id="payment-details" style="width:200px">Payment Details</button><br>
+       <button id="Dues/pay" style="width:200px">Dues & Pay Fees</button><br>
+       <button id="Update/Display" style="width:200px">Update/Display My Information & Upload Final year project with Details</button><br>
+       <button id="University-Marks-System" style="width:200px">University Marks System</button><br>
+       <button id="Sem. Feedback" style="width:200px">Sem. Feedback</button><br>
+       <button id="Exam Form" style="width:200px">Exam Form</button><br>
+   </div>
+   <button id="menu1" onclick="toggleMenu()">Menu</button>
+   <script>
+       var menu = document.getElementById("menu1");
+       function toggleMenu() {
+           var box = document.getElementById("box");
+           if (box.style.display === "none") {
+               box.style.display = "block";
+           } else {
+               box.style.display = "none";
+               menu.style.display = "block";
+           }
+       }
+   </script>
+  
+   <script src="index.js"></script>
 </body>
 </html>
+
