@@ -21,7 +21,7 @@ class NeuralNet(nn.Module):
         out = self.l2(out)
         out = self.relu(out)
         out = self.l3(out)
-        # no activation and no softmax at the end
+    
         return out
 
 def tokenize(sentence):
@@ -61,7 +61,7 @@ def bag_of_words(tokenized_sentence, words):
     return bag
 
 
-with open('intents.json', 'r') as f:
+with open('backend\\chatbot\\intents.json', 'r') as f:
     intents = json.load(f)
 
 all_words = []

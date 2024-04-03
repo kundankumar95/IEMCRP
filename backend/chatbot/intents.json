@@ -1,0 +1,14 @@
+{
+    "intents": [
+      {
+        "tag": "A0",
+        "patterns": [
+          "what is this website"
+        ],
+        "responses": [
+          "it is the official website of uemk",
+          "it is a educational website designed by uemk"
+        ]
+      }
+    ]
+}
