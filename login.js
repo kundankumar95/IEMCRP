@@ -1,24 +1,8 @@
-function ShowTime() {
-  const CurrentTime = new Date();
-  const time = `${CurrentTime.getHours()}:${CurrentTime.getMinutes()}:${CurrentTime.getSeconds()}`;
-  console.log(time);
-  document.getElementById("time").innerHTML = time;
-}
-
-function ShowCurrentDate() {
-  const currentDate = new Date();
-  const dateString = currentDate.toDateString();
-  document.getElementById("date").innerText = dateString;
-}
-setInterval(ShowTime, 1000);
-ShowCurrentDate();
-
-// student page
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -39,12 +23,12 @@ const auth = getAuth(app);
 const submit = document.getElementById("user-input");
 submit.addEventListener("click", function (event) {
   event.preventDefault();
-  const email = document.getElementById("Username").value;
-  const password = document.getElementById("password").value;
-  createUserWithEmailAndPassword(auth, email, password)
+  const email = document.getElementById('Username').value;
+  const password = document.getElementById('password').value;
+  signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      alert("Creating your account...");
+      alert("Logging In...");
       window.location.href = "student.html"
     })
     .catch((error) => {
