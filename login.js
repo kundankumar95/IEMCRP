@@ -22,30 +22,30 @@ const auth = getAuth(app);
 
 function generateCaptcha() {
   const captchaValue = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
-  const operand1 = Math.floor(Math.random() * 9) + 1;
+  const operand1 = Math.floor(Math.random() * 999) + 1;
   const operand2 = Math.floor(Math.random() * 9) + 1;
   const operator = Math.random() < 0.5 ? '+' : '-';
   const captchaExpression = `${operand1} ${operator} ${operand2}`;
   const result = operator === '+' ? operand1 + operand2 : operand1 - operand2;
   
-  document.getElementById('captcha-expression').textContent = captchaExpression;
+  document.getElementById('captcha-expression').textContent = operand1;
   
   return { expression: captchaExpression, value: result };
 }
 
-// Function to validate captcha
 function validateCaptcha() {
-  const userAnswer = document.getElementById('captcha').value;
-  const captchaValue = generateCaptcha().value;
-
-  if (parseInt(userAnswer) === captchaValue) {
-      console.log('Captcha Matched!');
-      return true;
+  const userAnswer = parseInt(document.getElementById('captcha').value);
+  const num1 = Math.floor(Math.random() * 10);
+  const expectedAnswer = eval(expression);
+  if (userAnswer === expectedAnswer) {
+    console.log('Captcha Matched!');
+    return true;
   } else {
-      console.log('Captcha Does Not Match!');
-      return false;
+    console.log('Captcha Does Not Match!');
+    return false;
   }
 }
+
 
 const submit = document.getElementById('user-input');
 submit.addEventListener('click', function (event) {

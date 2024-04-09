@@ -1,0 +1,197 @@
+import torch
+
+data = {
+    "intents": [
+        {
+            "tag": "A0",
+            "patterns": [
+                "what is this website"
+            ],
+            "responses": [
+                "This website is an educational platform developed by UEMK (University of Engineering & Management, Kolkata) and designed by Swarnavo Mukherjee, Kundan Kumar, Mayaboti Gorai, Priyanshu Kumar, and Anwesa Pal."
+            ]
+        },
+        {
+            "tag": "A1",
+            "patterns": [
+                "Who are the founders of this website?"
+            ],
+            "responses": [
+                "The website was developed by Swarnavo Mukherjee, Kundan Kumar, Mayaboti Gorai, Priyanshu Kumar, and Anwesa Pal."
+            ]
+        },
+        {
+            "tag": "A2",
+            "patterns": [
+                "What subjects does this website cover?"
+            ],
+            "responses": [
+                "This website covers a wide range of subjects including Mathematics, Physics, Chemistry, Biology, Computer Science, Literature, History, and more."
+            ]
+        },
+        {
+            "tag": "A3",
+            "patterns": [
+                "How can I register on this website?"
+            ],
+            "responses": [
+                "To register on this website, please visit the registration page and fill out the required information."
+            ]
+        },
+        {
+            "tag": "A4",
+            "patterns": [
+                "Is this website free to use?"
+            ],
+            "responses": [
+                "Yes, this website is completely free to use for all users."
+            ]
+        },
+        {
+            "tag": "A5",
+            "patterns": [
+                "Are there any mobile apps available for this website?"
+            ],
+            "responses": [
+                "Yes, we have mobile apps available for both iOS and Android platforms. You can download them from the respective app stores."
+            ]
+        },
+        {
+            "tag": "A6",
+            "patterns": [
+                "What are the features of this website?"
+            ],
+            "responses": [
+                "Some of the key features of this website include interactive lessons, quizzes, forums for discussion, progress tracking, and personalized learning paths."
+            ]
+        },
+        {
+            "tag": "A7",
+            "patterns": [
+                "How can I contact support?"
+            ],
+            "responses": [
+                "You can contact our support team through email at support@example.com or through our contact form available on the website."
+            ]
+        },
+        {
+            "tag": "A8",
+            "patterns": [
+                "Can I contribute content to this website?"
+            ],
+            "responses": [
+                "Yes, we welcome contributions from educators and experts. Please contact us for more information on how to contribute."
+            ]
+        },
+        {
+            "tag": "A9",
+            "patterns": [
+                "Is there a demo available for this website?"
+            ],
+            "responses": [
+                "Yes, we offer a demo version of the website where you can explore some of the features before signing up."
+            ]
+        },
+        {
+            "tag": "A10",
+            "patterns": [
+                "How frequently is the content updated?"
+            ],
+            "responses": [
+                "We strive to update the content regularly to ensure it stays relevant and up-to-date with the latest curriculum standards."
+            ]
+        },
+        {
+            "tag": "A11",
+            "patterns": [
+                "Are there any age restrictions for using this website?"
+            ],
+            "responses": [
+                "While there are no strict age restrictions, the content is primarily designed for students in middle school, high school, and early college."
+            ]
+        },
+        {
+            "tag": "A12",
+            "patterns": [
+                "Can I access this website offline?"
+            ],
+            "responses": [
+                "No, this website requires an internet connection to access the content and features."
+            ]
+        },
+        {
+            "tag": "A13",
+            "patterns": [
+                "What are the system requirements for using this website?"
+            ],
+            "responses": [
+                "You can access this website using any modern web browser on your computer, tablet, or smartphone."
+            ]
+        },
+        {
+            "tag": "A14",
+            "patterns": [
+                "Is there a community section on this website?"
+            ],
+            "responses": [
+                "Yes, we have a community section where users can interact with each other, ask questions, and share knowledge."
+            ]
+        },
+        {
+            "tag": "A15",
+            "patterns": [
+                "How can I reset my password?"
+            ],
+            "responses": [
+                "You can reset your password by visiting the password reset page and following the instructions."
+            ]
+        },
+        {
+            "tag": "A16",
+            "patterns": [
+                "Is there a premium version of this website?"
+            ],
+            "responses": [
+                "No, this website is completely free to use for all users and does not offer a premium version."
+            ]
+        },
+        {
+            "tag": "A17",
+            "patterns": [
+                "How can I report a bug or issue?"
+            ],
+            "responses": [
+                "You can report any bugs or issues you encounter through our bug reporting system, or by contacting our support team directly."
+            ]
+        },
+        {
+            "tag": "A18",
+            "patterns": [
+                "Can I download the content for offline use?"
+            ],
+            "responses": [
+                "No, the content on this website is not available for download for offline use."
+            ]
+        },
+        {
+            "tag": "A19",
+            "patterns": [
+                "Is there a tutorial for using this website?"
+            ],
+            "responses": [
+                "Yes, we provide a comprehensive tutorial for new users to help them get started with using the website."
+            ]
+        },
+        {
+            "tag": "A20",
+            "patterns": [
+                "What sets this website apart from others?"
+            ],
+            "responses": [
+                "This website stands out for its user-friendly interface, interactive learning tools, diverse range of subjects, and regular content updates to ensure a dynamic learning experience."
+            ]
+        }
+    ]
+}
+
+torch.save(data, 'data.pth')
