@@ -20,55 +20,21 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
-function generateCaptcha() {
-  const captchaValue = Math.floor(Math.random() * (999 - 100 + 1)) + 100;
-  const operand1 = Math.floor(Math.random() * 999) + 1;
-  const operand2 = Math.floor(Math.random() * 9) + 1;
-  const operator = Math.random() < 0.5 ? '+' : '-';
-  const captchaExpression = `${operand1} ${operator} ${operand2}`;
-  const result = operator === '+' ? operand1 + operand2 : operand1 - operand2;
-  
-  document.getElementById('captcha-expression').textContent = operand1;
-  
-  return { expression: captchaExpression, value: result };
-}
-
-function validateCaptcha() {
-  const userAnswer = parseInt(document.getElementById('captcha').value);
-  const num1 = Math.floor(Math.random() * 10);
-  const expectedAnswer = eval(expression);
-  if (userAnswer === expectedAnswer) {
-    console.log('Captcha Matched!');
-    return true;
-  } else {
-    console.log('Captcha Does Not Match!');
-    return false;
-  }
-}
-
-
-const submit = document.getElementById('user-input');
-submit.addEventListener('click', function (event) {
+const submit = document.getElementById("user-input");
+submit.addEventListener("click", function (event) {
   event.preventDefault();
   const email = document.getElementById('Username').value;
   const password = document.getElementById('password').value;
-  const captchaValid = validateCaptcha();
-
-  if (captchaValid) {
-      signInWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-              const user = userCredential.user;
-              alert('Logging In...');
-              window.location.href = 'student.html';
-          })
-          .catch((error) => {
-              const errorMessage = error.message;
-              alert(errorMessage);
-          });
-  } else {
-      alert('Captcha verification failed.');
-  }
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("Logging In...");
+      window.location.href = "student.html"
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
 });
-
-// Generate captcha on page load
-window.onload = generateCaptcha;
+const option_btn = document.getElementById("option");

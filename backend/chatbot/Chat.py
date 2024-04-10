@@ -64,10 +64,10 @@ def bag_of_words(tokenized_sentence, words):
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('/home/kundankarn/IEMCRP/backend/chatbot/intents.json', 'r') as json_data:
+with open('backend\\chatbot\\intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = "/home/kundankarn/IEMCRP/backend/data.pth"
+FILE = "data.pth"
 data = torch.load(FILE, map_location=torch.device('cpu'))
 
 
